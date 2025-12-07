@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background: #373737;
+    background-color: black;
+    background-image: url('https://cdn.jsdelivr.net/gh/agentN86/probable-octo-memory@master/space.gif');
     font-family: Arial, sans-serif;
     color: #ddd;
     overflow-y: hidden;
@@ -15,7 +16,10 @@ body {
 
 .sidebar,
 .content {
-    background: #2e2b2e;
+    background-color: #2e2b2e;
+    background-image: url('https://cdn.jsdelivr.net/gh/agentN86/probable-octo-memory@master/patternreallydark.png');
+    border: 3px solid transparent;
+    border-image: url('https://cdn.jsdelivr.net/gh/agentN86/probable-octo-memory@master/patterndark.png') 3 repeat;
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
@@ -99,4 +103,19 @@ nav a.active {
 
 table {
     width: 100%;
+}
+
+.captionBox,
+.link-group
+{
+    padding: 10px;
+    border: 1px solid transparent;
+    background-color: #333;
+
+    background-image: url('https://cdn.jsdelivr.net/gh/agentN86/probable-octo-memory@master/patterndark.png');
+    border-image: url('https://cdn.jsdelivr.net/gh/agentN86/probable-octo-memory@master/patternreallydark.png') 3 repeat;
+}
+
+.link-group {
+    text-align: center;
 }
