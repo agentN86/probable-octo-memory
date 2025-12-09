@@ -5,6 +5,9 @@ body {
     font-family: Arial, sans-serif;
     color: #ddd;
     overflow-y: hidden;
+
+    animation: moveBackground 10s linear infinite;
+    transition: background-image 1s ease-in-out;
 }
 
 .wrapper {
@@ -118,4 +121,13 @@ table {
 
 .link-group {
     text-align: center;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 512px 512px;
+  }
 }
