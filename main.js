@@ -264,3 +264,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// storage stuff woo yeah
+
+const STORAGE_KEY = 'siteViewCount';
+
+function updateViewCountLocalStorage() {
+    let currentCount = localStorage.getItem(STORAGE_KEY);
+    let newCount;
+
+    if (currentCount === null) {
+        newCount = 1;
+    } else {
+        newCount = parseInt(currentCount, 10) + 1;
+    }
+
+    localStorage.setItem(STORAGE_KEY, newCount.toString());
+
+    const displayElement = document.getElementById('view-count-display');
+    const displayMessage = document.getElementById('view-message');
+    if (displayElement) {
+        displayElement.textContent = newCount;
+
+        if (newCount <= 9) {
+          displayMessage.textContent = "Such humble beginnings."
+        } else if (newCount <= 30) {
+          displayMessage.textContent = "Starting to get into it."
+        } else if (newCount <= 50) {
+          displayMessage.textContent = "I'd consider you a regular vistor."
+        } else if (newCount <= 100) {
+          displayMessage.textContent = "Have you done your homework yet?"
+        } else if (newCount <= 150) {
+          displayMessage.textContent = "There are more things to do than being on cool club."
+        } else if (newCount <= 200) {
+          displayMessage.textContent = "I'm starting to be concerned.."
+        } else if (newCount <= 300) {
+          displayMessage.textContent = "You do know you have classes right? Right?"
+        } else if (newCount <= 500) {
+          displayMessage.textContent = "Christ.."
+        } else if (newCount <= 700) {
+          displayMessage.textContent = "Check your grades."
+        } else if (newCount <= 1000) {
+          displayMessage.textContent = "Please stop. Genuinely."
+        } else {
+          displayMessage.textContent = "I can't even say anything more than this. Please focus more on your academic journey, I'm really shocked by the fact you could reach a point like this"
+        }
+    }
+}
+
+updateViewCountLocalStorage();
