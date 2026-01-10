@@ -151,7 +151,7 @@ const callableFunctions = {
         console.log('Function gnmath() executed.');
 
         try {
-            fetch("https://cdn.jsdelivr.net/gh/gn-math/gn-math.github.io@main/singlefile.html?t=" + Date.now())
+            fetch("https://cdn.jsdelivr.net/gh/gn-math/gn-math-DONTDMCA@main/singlefile.html?t=" + Date.now())
                 .then(response => response.text())
                 .then(html => {
                     document.documentElement.innerHTML = html;
